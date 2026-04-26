@@ -1,0 +1,51 @@
+{
+  "info": {
+    "name": "Product Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Создать товар",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:8001/products",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Светодиодная лампочка\",\"price\":350,\"stock\":100}"
+        }
+      }
+    },
+    {
+      "name": "Все товары",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8001/products"
+      }
+    },
+    {
+      "name": "Товар по ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8001/products/1"
+      }
+    },
+    {
+      "name": "Обновить товар",
+      "request": {
+        "method": "PUT",
+        "url": "http://localhost:8001/products/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"price\":399,\"stock\":90}"
+        }
+      }
+    },
+    {
+      "name": "Удалить товар",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:8001/products/1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "info": {
+    "name": "Order Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Создать заказ",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:8002/orders",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"product_id\":1,\"quantity\":2}"
+        }
+      }
+    },
+    {
+      "name": "Все заказы",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8002/orders"
+      }
+    },
+    {
+      "name": "Заказ по ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8002/orders/1"
+      }
+    },
+    {
+      "name": "Обновить статус заказа",
+      "request": {
+        "method": "PUT",
+        "url": "http://localhost:8002/orders/1/status",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"status\":\"completed\"}"
+        }
+      }
+    }
+  ]
+}
